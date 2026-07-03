@@ -132,6 +132,18 @@ cd RetroPie-Manager
 make install
 ```
 
+# Validation
+
+Run the repository validation wrapper from the root:
+
+```sh
+bash scripts/validate.sh
+```
+
+This performs a Linux-friendly repository shape and metadata smoke. Full
+install/startup validation still requires a RetroPie-compatible Python 2/Django
+environment. See `docs/validation.md` for the current runtime boundary.
+
 # Known bugs
 
 - (FIXED) You'll get a 404 error trying to delete roms

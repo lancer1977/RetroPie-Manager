@@ -1,0 +1,16 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+
+# Local app/runtime state
+bin/
+include/
+lib/
+local/
+node_modules/
+compass/.sass-cache/
+
+# IDE/user-local files
+.venv/
+.vscode/
+.idea/

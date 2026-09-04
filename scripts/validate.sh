@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+./scripts/test-no-plaintext-secret-key.sh
+./scripts/check-no-plaintext-secret-key.sh project/settings.py
+
 node --check Gruntfile.js
 python3 - <<'PY'
 import json

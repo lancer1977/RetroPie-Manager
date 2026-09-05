@@ -34,7 +34,10 @@ SITE_FIXED = {
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(_0!&^^xekahfp=s5(9+^wlq6gvn6z90%i*p+wn^4ir+mvl4lx'
+# The key must be provided via the DJANGO_SECRET_KEY environment variable at
+# runtime. No literal key value lives in source control -- see
+# Polyhydra-Games/projects-hub#56 for the tracking issue and rotation status.
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

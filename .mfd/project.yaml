@@ -1,0 +1,28 @@
+schema_version: 2
+merge_policy:
+  integration_branch: dev
+  protected_branch: main
+  required_checks: []
+  test_tiers:
+    unit:
+      command: "GAP: none in CI"
+      required_for: []
+    integration:
+      command: "GAP: none in CI"
+      required_for: []
+    automation:
+      command: "node --check Gruntfile.js && bash scripts/validate.sh"
+      required_for: []
+    smoke:
+      command: "GAP: none in CI"
+      required_for: []
+  escalate_paths:
+    - "**/*secret*"
+    - "**/*credential*"
+    - "**/*auth*"
+    - ".github/workflows/**"
+    - "**/*infra*"
+    - "**/*deploy*"
+  escalate_labels:
+    - decision
+    - bug
